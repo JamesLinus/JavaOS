@@ -11,8 +11,10 @@ public class Lp {
 		do {
 			if (stop == false) {
 				if (loginBool == true && username.length() == 0) {
-					username = login(scanner, loginBool, username);
-					if (username.length() > 0 && username.length() < 24) {
+					String tmp = login(scanner, loginBool, username);
+					if (tmp.length() > 0 && tmp.length() < 24) {
+						username = tmp;
+						userMap.put("username", username);
 						loginBool = false;
 					}
 				}
@@ -23,6 +25,7 @@ public class Lp {
 						loginBool = true;
 					} while (tmp.length() < 0 && tmp.length() > 16);
 					password = tmp;
+					userMap.put("password", tmp)
 
 				}
 				loggedIn = true;
