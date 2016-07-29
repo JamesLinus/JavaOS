@@ -1,5 +1,5 @@
 import java.util.*;
-public class Lp {
+public class JavaOS {
 	private static boolean stop = false;
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
